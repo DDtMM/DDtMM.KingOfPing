@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="yes"?>
+<websitePingConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <server minSleep="60" maxSleep="500" logSize="15" />
+  <sites>
+    <site siteID="1" url="http://daniel.gimenez.biz/" startTime="2013-05-25T06:00:00-04:00" endTime="2013-05-24T23:30:00-04:00" interval="600" nextRun="2013-05-24T10:40:10.5156-04:00" />
+    <site siteID="2" url="http://www.gimenez.biz/" startTime="2013-05-25T06:00:00-04:00" endTime="2013-05-24T23:30:00-04:00" interval="600" nextRun="2013-05-24T10:40:10.5156-04:00" />
+  </sites>
+  <eventLog />
+  <log logID="54" siteID="-1" runTime="2013-05-17T11:00:50.222215-04:00" success="true" resultCode="100">Server Started</log>
+  <log logID="55" siteID="-1" runTime="2013-05-17T11:02:27.4217745-04:00" success="true" resultCode="100">Server Started</log>
+  <log logID="58" siteID="-1" runTime="2013-05-17T11:02:37.8293698-04:00" success="true" resultCode="101">Server Stopped</log>
+  <log logID="59" siteID="-1" runTime="2013-05-17T11:03:27.9892388-04:00" success="true" resultCode="100">Server Started</log>
+  <log logID="62" siteID="-1" runTime="2013-05-17T11:03:39.1068747-04:00" success="true" resultCode="101">Server Stopped</log>
+  <log logID="63" siteID="-1" runTime="2013-05-20T12:04:22.319641-04:00" success="true" resultCode="100">Server Started</log>
+  <log logID="96" siteID="-1" runTime="2013-05-20T13:37:59.2986489-04:00" success="true" resultCode="100">Server Started</log>
+  <log logID="99" siteID="-1" runTime="2013-05-20T13:43:36.8177601-04:00" success="true" resultCode="101">Server Stopped</log>
+  <log logID="100" siteID="-1" runTime="2013-05-20T16:10:50.0763631-04:00" success="true" resultCode="100">Server Started</log>
+  <log logID="145" siteID="1" runTime="2013-05-23T07:55:31.5-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'daniel.gimenez.biz'</log>
+  <log logID="146" siteID="2" runTime="2013-05-23T07:55:31.5468001-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'www.gimenez.biz'</log>
+  <log logID="147" siteID="1" runTime="2013-05-23T08:05:31.5853521-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="148" siteID="2" runTime="2013-05-23T08:05:51.2881864-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="149" siteID="1" runTime="2013-05-23T08:40:32.5-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'daniel.gimenez.biz'</log>
+  <log logID="150" siteID="2" runTime="2013-05-23T08:40:32.5156-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'www.gimenez.biz'</log>
+  <log logID="151" siteID="1" runTime="2013-05-23T08:50:32.5512018-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="152" siteID="2" runTime="2013-05-23T08:50:51.4272347-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="153" siteID="1" runTime="2013-05-23T09:53:23.5-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'daniel.gimenez.biz'</log>
+  <log logID="154" siteID="2" runTime="2013-05-23T09:53:25.5748036-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="155" siteID="1" runTime="2013-05-23T11:38:54.5-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'daniel.gimenez.biz'</log>
+  <log logID="156" siteID="2" runTime="2013-05-23T11:38:54.5312001-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'www.gimenez.biz'</log>
+  <log logID="157" siteID="1" runTime="2013-05-23T15:36:20.5-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'daniel.gimenez.biz'</log>
+  <log logID="158" siteID="2" runTime="2013-05-23T15:36:22.5904036-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="159" siteID="1" runTime="2013-05-23T15:46:20.8246638-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="160" siteID="2" runTime="2013-05-23T15:46:24.1630696-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="161" siteID="1" runTime="2013-05-23T15:56:21.2853108-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="162" siteID="2" runTime="2013-05-23T15:56:21.3789109-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="163" siteID="1" runTime="2013-05-23T16:06:21.5119573-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="164" siteID="2" runTime="2013-05-23T16:06:21.5899575-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="165" siteID="1" runTime="2013-05-24T07:49:08.5-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'daniel.gimenez.biz'</log>
+  <log logID="166" siteID="2" runTime="2013-05-24T07:49:10.5904037-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'www.gimenez.biz'</log>
+  <log logID="167" siteID="1" runTime="2013-05-24T07:59:08.5655361-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="168" siteID="2" runTime="2013-05-24T07:59:28.6895712-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="169" siteID="1" runTime="2013-05-24T09:17:39.5-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'daniel.gimenez.biz'</log>
+  <log logID="170" siteID="2" runTime="2013-05-24T09:17:41.0600027-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'www.gimenez.biz'</log>
+  <log logID="171" siteID="1" runTime="2013-05-24T09:27:39.0456983-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="172" siteID="2" runTime="2013-05-24T09:27:42.0409035-04:00" success="true" resultCode="OK" xsi:nil="true" />
+  <log logID="173" siteID="1" runTime="2013-05-24T10:06:32.5-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'daniel.gimenez.biz'</log>
+  <log logID="174" siteID="2" runTime="2013-05-24T10:06:33.0304009-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'www.gimenez.biz'</log>
+  <log logID="175" siteID="1" runTime="2013-05-24T10:30:10.5156-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'daniel.gimenez.biz'</log>
+  <log logID="176" siteID="2" runTime="2013-05-24T10:30:10.5156-04:00" success="false" resultCode="exception">The remote name could not be resolved: 'www.gimenez.biz'</log>
+</websitePingConfig>

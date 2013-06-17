@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="DDtMM.KingOfPing.PingService" CodeBehind="PingService.svc.cs" %>

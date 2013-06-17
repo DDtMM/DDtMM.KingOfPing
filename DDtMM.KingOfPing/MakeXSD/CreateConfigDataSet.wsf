@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/WindowsScriptHost">
+	<job>
+		<script language="VBScript">
+            Dim ws, exec, output
+            Set ws = CreateObject("Wscript.Shell")
+            Set exec = ws.Exec("xsd.exe /d /l:cs ..\WebsitePingConfig.xsd /eld /o:..\ /n:DDtMM.KingOfPing")
+            
+            output = ""
+            Do While Not exec.StdOut.AtEndOfStream
+                output = output + exec.StdOut.ReadLine() + vbNewLine
+            Loop
+
+            
+            output = output + Cstr(exec.ExitCode)
+            Wscript.Echo output
+            
+		</script>
+	</job>
+</package>

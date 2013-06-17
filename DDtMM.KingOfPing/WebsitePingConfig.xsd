@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns="DDtMM.KingOfPing" 
+           attributeFormDefault="unqualified" 
+           elementFormDefault="qualified" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="websitePingConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="server" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:attribute name="minSleep" type="xs:int" use="required" />
+            <xs:attribute name="maxSleep" type="xs:int" use="required" />
+            <xs:attribute name="logSize" type="xs:int" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sites" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="site" type="Site" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="eventLog" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="log" type="LogEntry" nillable="true" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    <xs:key name="logKey" msdata:PrimaryKey="true">
+      <xs:selector xpath="events/log"/>
+      <xs:field xpath="@logID"/>
+    </xs:key>
+    <xs:key name="siteKey" msdata:PrimaryKey="true">
+      <xs:selector xpath="sites/site"/>
+      <xs:field xpath="@siteID"/>
+    </xs:key>
+  </xs:element>
+  <xs:complexType name="Site">
+    <xs:attribute name="siteID" type="xs:int" use="required" />
+    <xs:attribute name="url" type="xs:string" use="required" />
+    <xs:attribute name="startTime" type="xs:time" use="required" />
+    <xs:attribute name="endTime" type="xs:time" use="required" />
+    <xs:attribute name="interval" type="xs:int" use="required" />
+    <xs:attribute name="nextRun" type="xs:dateTime" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="LogEntry" >
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="logID" type="xs:int" use="required"  />
+        <xs:attribute name="siteID" type="xs:int" use="required" />
+        <xs:attribute name="runTime" type="xs:dateTime" use="required" />
+        <xs:attribute name="success" type="xs:boolean" use="required" />
+        <xs:attribute name="resultCode" type="xs:string" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>

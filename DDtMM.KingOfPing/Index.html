@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="Content/Site.css" />
+</head>
+<body>
+    <h1>Website Pinger</h1>
+
+    
+    <table id="siteTable">
+ 
+    </table>
+    <div id="menu">
+        <button id="RunNowButton">Run Now</button>
+        <button id="RefreshButton">Refresh</button>
+        <div id="RefreshInfo">
+            <div>
+                <span id="autoRefreshLabel">Auto Refresh Interval: </span>
+                <select id="autoRefreshInterval">
+                    <option value="30000">30 Seconds</option>
+                    <option value="60000">One Minute</option>
+                    <option value="120000">2 Minutes</option>
+                    <option value="300000" selected="selected">5 Minutes</option>
+                    <option value="600000">10 Minutes</option>
+                    <option value="3600000">One Hour</option>
+                </select>
+            </div>
+            <div>
+                <span id="lastRefreshLabel"></span>
+            </div>
+        </div>
+    </div>
+    <div id="logPanel" style="display:none">
+        <tr class="detail"><td colspan="5" ><div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Success</th>
+                        <th>Result Code</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>{{Logs:logRowTemplate}}</tbody>
+            </table>
+        </div></td></tr>
+    </div>
+    <script id="siteTableTemplate" type="text/template">
+       <thead>
+            <tr>
+                <th>Url</th>
+                <th>Interval</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Next Run</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>{{siteRowTemplate:SiteRows}}</tbody>
+    </script>
+    <script id="siteRowTemplate" type="text/template">
+        <tr class="topLevel">
+            <td><a href="{{Url}}" target="_blank">{{Url}}</a></td>
+            <td>{{Interval}}</td>
+            <td>{{StartTime}}</td>
+            <td>{{EndTime}}</td>
+            <td>{{NextRun}}</td>
+            <td><button onclick="viewLog()">View Log</button></td>
+        </tr>
+    </script>
+    <script id="logRowTemplate" type="text/template">
+        <tr class="message"><td>{{RunTime}}</td><td>{{Success}}</td><td>{{ResultCode}}</td><td>{{Message}}</td></tr>
+    </script>
+    <!--<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>-->
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="Scripts/moment.min.js"></script>
+    <script src="Scripts/dgStorage.js"></script>
+    <script src="Scripts/SimpleTemplates.js"></script>
+    <script src="Scripts/Site.js"></script>
+</body>
+</html>
